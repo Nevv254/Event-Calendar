@@ -1,27 +1,29 @@
 // Creating the array of events
 let events = [
     {
-        title: "Meeting",
+        title: "Safaricom",
         date: new Date(2025, 5, 28, 14, 0), // June 28th, 2025 at 2:00 PM
         location: "Conference Room A",
         attendees: new Set(["Omosa", "Kiptanui", "Alice"]),
         organizer: "Charlie" // Added manually, but will use WeakMap for dynamic addition
     },
     {
-        title: "Presentation",
+        title: "Zindua Presentation",
         date: new Date(2025, 5, 30, 10, 30), // June 30th, 2025 at 10:30 AM
         location: "Auditorium",
         attendees: new Set(["Mutune","Wallance", "Roy"]),
         organizer: "David"
     },
     {
-        title: "Team Lunch",
+        title: "Masterclass",
         date: new Date(2025, 6, 3, 12, 0), // July 3rd, 2025 at 12:00 PM
         location: "Cafeteria",
         attendees: new Set(["Bob", "Eve"]),
         organizer: "Frank"
     }
 ];
+
+console.log(events);
 
 // Function to add a new attendee to an event
 function addAttendee(eventTitle, attendeeName) {
@@ -96,8 +98,8 @@ function eventWithMostAttendees() {
     console.log(`Event with the most attendees:\nTitle: ${event.title}, Attendees: ${[...event.attendees].join(", ")}`);
 }
 
-console.log("Adding new attendee to 'Meeting' event...");
-addAttendee("Meeting", "Carol");
+console.log("Adding new attendee to 'Zindua Presentation' event...");
+addAttendee("Safaricom", "Carol");
 
 console.log("\nDisplaying events in the next 7 days...");
 displayEventsNext7Days();
@@ -107,7 +109,7 @@ console.log(eventsToJSON());
 
 logEventTitlesAndDates();
 
-console.log("\nDeleting 'Team Lunch' event...");
+console.log("\nDeleting 'Masterclass' event...");
 deleteEvent("Team Lunch");
 
 console.log("\nFinding event with the most attendees...");
